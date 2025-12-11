@@ -4,7 +4,7 @@ class Libro:
         self.autor = autor
         self.isbn = isbn
         self.disponible = disponible
-        self.conteo = 0
+        self.__conteo = 0 # Convertir variable en privada
 
     def __str__(self):
         return f"Titulo: {self.titulo}, Autor: {self.autor}, ISBN: {self.isbn}, Disponible: {self.disponible}"
@@ -12,7 +12,7 @@ class Libro:
     def prestar(self):
         if self.disponible:
             self.disponible = False
-            self.conteo += 1
+            self.__conteo += 1
         return f"{self.titulo} Prestado correctamente"
 
     def devolver(self):
@@ -20,7 +20,7 @@ class Libro:
         return f"{self.titulo} Devuelto correctamente"
     
     def es_popular(self):
-        if self.conteo > 5:
+        if self.__conteo > 5:
             return f"{self.titulo} Es un libro popular"
         return f"{self.titulo} Aun no es un libro popular"
     
