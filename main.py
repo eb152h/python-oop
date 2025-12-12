@@ -24,6 +24,14 @@ class Libro:
             return f"{self.titulo} Es un libro popular"
         return f"{self.titulo} Aun no es un libro popular"
     
+    #Getter para variable conteo
+    def get_conteo(self):
+        return self.__conteo
+    
+    #Setter para variable conteo
+    def set_conteo(self, conteo):
+        self.__conteo = conteo
+    
 
 
 mi_libro = Libro("100 años de Soledad", "Gabril Garcia Marquez", "1298374", True)
