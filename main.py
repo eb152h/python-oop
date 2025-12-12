@@ -5,7 +5,7 @@ class LibroProtocol(Protocol):
         """Metodo que se implementara para prestar libros"""
         ...
 
-    def duracion_prestamo() -> str:
+    def duracion_prestamo(self) -> str:
         """Mtodo que se utilizara para definir la duracion del prestamo"""
         ...
 
