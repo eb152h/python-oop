@@ -1,3 +1,15 @@
+from typing import Protocol
+
+class LibroProtocol(Protocol):
+    def prestar(self) -> str:
+        """Metodo que se implementara para prestar libros"""
+        ...
+
+    def duracion_prestamo() -> str:
+        """Mtodo que se utilizara para definir la duracion del prestamo"""
+        ...
+
+
 class Libro:
     def __init__(self, titulo, autor, isbn, disponible):
         self.titulo = titulo
