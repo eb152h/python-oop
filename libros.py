@@ -51,24 +51,3 @@ class LibroFisico(Libro):
 class LibroDigital(Libro):
     def calcular_duracion(self):
         return "14 días"
-    
-class Biblioteca:
-    def __init__(self, nombre):
-        self.nombre = nombre
-        self.libros = []
-        self. usuarios = []
-
-    def libros_disponibles(self):
-        return [
-            libro.titulo
-            for libro in self.libros
-            if libro.disponible
-        ]
-
-mi_libro = LibroFisico("100 años de Soledad", "Gabril Garcia Marquez", "1298374", True)
-mi_libro_no_disponible = LibroFisico("100 años de Soledad", "Gabril Garcia Marquez", "1298374", False)
-otro_libro = LibroFisico("El principito", "Saint-Exupéry", "987374", True)
-
-biblioteca = Biblioteca("Biblioteca Patzi")
-biblioteca.libros = [mi_libro, mi_libro_no_disponible, otro_libro]
-print(biblioteca.libros_disponibles())

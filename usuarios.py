@@ -44,12 +44,4 @@ class Profesor(Usuario):
         return f"Prestamo del libro: {titulo} autorizado"
     
 
-estudiante = Estudiante("Luis", "1234546", "Sistemas")
-profesor = Profesor("Jorge", "1234547")
 
-estudiante_1 = Estudiante("Felipe", "1234548", "Salud")
-
-usuarios: list[SolicitanteProtocol] = [estudiante, estudiante_1, profesor]
-
-for usuario in usuarios:
-    print(usuario.solicitar_libro("Titulo de ejemplo"))
